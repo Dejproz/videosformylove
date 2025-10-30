@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff5f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ff7ba9, #ffb6c1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header input {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 220px;
+  max-width: 60%;
+}
+
+/* Video Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.video-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.video-card video {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 14px 14px 0 0;
+}
+
+.video-card h3 {
+  font-size: 1.1rem;
+  color: #d81b60;
+  text-align: center;
+  padding: 8px;
+}
+
+.video-card p {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 10px 15px;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background: #ff7ba9;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  header input {
+    width: 100%;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header input {
+    width: 100%;
+  }
+}
